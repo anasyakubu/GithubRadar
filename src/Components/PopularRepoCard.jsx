@@ -2,6 +2,8 @@
 // import UserImage from "../assets/102716454.jpeg";
 import { FaUsers } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
+
 import { Link } from "react-router-dom";
 
 const PopularRepoCard = ({
@@ -22,6 +24,10 @@ const PopularRepoCard = ({
             <span className="text-lg font-semibold">{name}</span>
             <br /> <span className="text-sm font-light">{username}</span>
           </h6>
+          <br />
+          <span className="py-4 text-blue-600">
+            <FaCheckCircle />
+          </span>
         </div>
         <div className="mt-5">
           <p className="">{details}</p>
