@@ -1,5 +1,7 @@
 // import React from 'react'
 import Nav from "../../Components/Nav";
+import ProfileCard from "../../Components/ProfileCard";
+import "./Hero.scss";
 
 const Hero = () => {
   return (
@@ -33,7 +35,13 @@ const Hero = () => {
               </div>
             </form>
           </div>
-          <div className="mt-10"></div>
+          <div className="mt-16">
+            <div className="p-1 space-y-2 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
+              <ProfileCard />
+              <ProfileCard />
+              <ProfileCard />
+            </div>
+          </div>
         </div>
       </div>
     </div>
