@@ -15,12 +15,11 @@ const Hero = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        `https://api.github.com/search/users?q=${searchInput}&per_page=10`
+        `https://api.github.com/users/${searchInput}`
       );
       const data = await response.json();
-      if (data.items.length > 0) {
-        setUserData(data.items[0]);
-        console.log(data);
+      if (data.login) {
+        setUserData(data);
       } else {
         setUserData(null);
       }
@@ -35,7 +34,7 @@ const Hero = () => {
       <div className="p-24">
         <div className="">
           <div className="">
-            <h2 className="text-4xl text-[#ece383]">Github Rader.</h2>
+            <h2 className="text-4xl text-[#ece383]">Github Radar.</h2>
             <p className="mt-3">
               Search more than 51M users on Github. A database that contains all
               the Github Profiles <br />
@@ -65,13 +64,20 @@ const Hero = () => {
               <div className="p-1 space-y-2 lg:grid lg:grid-cols-3 lg:gap-x-6 lg:space-y-0">
                 <ProfileCard
                   userImage={userData.avatar_url}
-                  name={userData.login}
+                  name={userData.name}
                   username={userData.login}
-                  details={userData.url}
+                  details={userData.bio}
                   link={userData.html_url}
-                  followers={userData.followers_url.length}
-                  following={userData.following_url.length}
-                  userType={userData.type}
+                  followers={userData.followers}
+                  following={userData.following}
+                  // bio={userData.bio}
+                  // twitter={userData.twitter_username}
+                  // company={userData.company}
+                  // blog={userData.blog}
+                  // publicRepos={userData.public_repos}
+                  // publicGists={userData.public_gists}
+                  // createdAt={userData.created_at}
+                  // updatedAt={userData.updated_at}
                 />
               </div>
             )}
