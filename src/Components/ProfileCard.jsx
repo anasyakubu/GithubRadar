@@ -73,7 +73,9 @@ const ProfileCard = ({
                 rel="noopener noreferrer"
               >
                 <span>Visit Profile</span>
-                <FaExternalLinkAlt />
+                <span className="py-1">
+                  <FaExternalLinkAlt />
+                </span>
               </Link>
             </button>
           </div>
