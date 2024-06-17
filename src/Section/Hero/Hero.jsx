@@ -70,9 +70,10 @@ const Hero = () => {
                   link={userData.html_url}
                   followers={userData.followers}
                   following={userData.following}
-                  // bio={userData.bio}
-                  // twitter={userData.twitter_username}
-                  // company={userData.company}
+                  repo={userData.public_repos}
+                  company={userData.company}
+                  instaLink={userData.twitter_username}
+                  xLink={userData.twitter_username}
                   // blog={userData.blog}
                   // publicRepos={userData.public_repos}
                   // publicGists={userData.public_gists}

@@ -2,6 +2,8 @@
 import { Link } from "react-router-dom";
 import { FaUsers } from "react-icons/fa";
 import { FaExternalLinkAlt } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const ProfileCard = ({
   userImage,
@@ -11,7 +13,10 @@ const ProfileCard = ({
   followers,
   following,
   link,
-  userType,
+  repo,
+  company,
+  instaLink,
+  xLink,
 }) => {
   return (
     <div className="ProfileCard bg-[#f8f8f8] text-[#1b1b1b] p-5 rounded-lg shadow-lg">
@@ -35,8 +40,27 @@ const ProfileCard = ({
             <span>| {following} Following</span>
           </p>
           <p className="mt-5">
-            Type: <span>{userType}</span>
+            Public repos: <span>{repo}</span>
           </p>
+          <p className="mt-5">
+            Company: <span>{company}</span>
+          </p>
+          <div className="hidden mt-5 lg:flex lg:flex-1 lg:justify-start">
+            <a
+              href={`${instaLink}`}
+              className="p-3 bg-black rounded-full m-2 icon"
+              target="_blank"
+            >
+              <FaInstagram className="text-white" />
+            </a>
+            <a
+              href={`${xLink}`}
+              className="p-3 bg-black rounded-full m-2 icon"
+              target="_blank"
+            >
+              <FaXTwitter className="text-white" />
+            </a>
+          </div>
           <div className="mt-5">
             <button
               className="p-2 w-32 pr-5 pl-5 rounded-full bg-black text-[#f8f8f8] text-sm hover:bg-transparent border border-black hover:text-[black] hover:border-[black]"
