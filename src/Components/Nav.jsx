@@ -7,9 +7,9 @@ import { FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const navigation = [
   { name: "Home", href: "/" },
-  { name: "About", href: "/#About" },
+  // { name: "About", href: "/#About" },
   { name: "Github", href: "https://github.com/anasyakubu", target: "_blank" },
-  { name: "Contact", href: "/" },
+  // { name: "Contact", href: "/" },
   // { name: "Contact", href: "#" },
 ];
 
